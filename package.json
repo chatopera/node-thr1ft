@@ -1,0 +1,66 @@
+{
+  "author": {
+    "name": "Chatopera Inc.",
+    "email": "info@chatopera.com",
+    "url": "https://www.chatopera.com"
+  },
+  "bugs": {
+    "url": "https://github.com/chatopera/node-thrift/issues"
+  },
+  "dependencies": {
+    "debug": "^4.3.2",
+    "node-int64": "^0.4.0",
+    "q": "^1.5.0",
+    "ws": "^5.0.0"
+  },
+  "description": "node.js bindings for the Apache Thrift RPC system",
+  "devDependencies": {
+    "@types/node": "^10.12.6",
+    "@types/q": "^1.5.1",
+    "buffer-equals": "^1.0.4",
+    "commander": "^2.14.1",
+    "connect": "^3.6.6",
+    "eslint": "^5.7.0",
+    "eslint-config-prettier": "^3.1.0",
+    "eslint-plugin-prettier": "^3.0.0",
+    "istanbul": "^0.4.5",
+    "jsdoc": "^3.5.5",
+    "prettier": "^1.14.3",
+    "tape": "^4.9.0",
+    "typescript": "^3.1.6",
+    "utf-8-validate": "^4.0.0"
+  },
+  "directories": {
+    "lib": "./lib/nodejs/lib/thrift"
+  },
+  "engines": {
+    "node": ">= 4.1.0"
+  },
+  "files": [
+    "lib/nodejs/lib/thrift",
+    "lib/nodejs/README.md"
+  ],
+  "homepage": "https://github.com/chatopera/node-thrift",
+  "license": "Apache-2.0",
+  "licenses": [
+    {
+      "type": "Apache-2.0",
+      "url": "http://www.apache.org/licenses/LICENSE-2.0"
+    }
+  ],
+  "main": "./lib/nodejs/lib/thrift",
+  "name": "@chatopera/thrift",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chatopera/node-thrift.git"
+  },
+  "scripts": {
+    "cover": "lib/nodejs/test/testAll.sh COVER",
+    "lint": "eslint lib/nodejs/. --ext .js",
+    "lint-tests": "eslint lib/nodejs/test/. --ext .js",
+    "prettier": "prettier --write '**/*.js'",
+    "test": "lib/nodejs/test/testAll.sh",
+    "test-ts": "lib/nodets/test/testAll.sh"
+  },
+  "version": "0.12.0"
+}
