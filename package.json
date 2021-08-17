@@ -1,4 +1,10 @@
 {
+  "name": "thr1ft",
+  "version": "0.12.1",
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org",
+    "access": "public"
+  },
   "author": {
     "name": "Chatopera Inc.",
     "email": "info@chatopera.com",
@@ -46,7 +52,6 @@
     }
   ],
   "main": "./lib/nodejs/lib/thrift",
-  "name": "@chatopera/thrift",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/chatopera/node-thrift.git"
@@ -61,10 +66,5 @@
     "prettier": "prettier --write '**/*.js'",
     "test": "lib/nodejs/test/testAll.sh",
     "test-ts": "lib/nodets/test/testAll.sh"
-  },
-  "version": "0.12.0",
-  "publishConfig": {
-    "registry": "https://registry.npmjs.org",
-    "access": "public"
   }
 }
