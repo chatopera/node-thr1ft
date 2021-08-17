@@ -1,6 +1,29 @@
 Apache Thrift
 =============
 
+# TL;DR
+
+Add `onTerminated` for handling terminations.
+Issue [https://github.com/chatopera/node-thr1ft/issues/1](https://github.com/chatopera/node-thr1ft/issues/1).
+
+```
+const thrift = require("thr1ft");
+var _conn = thrift.createConnection(host, port, {
+  transport: thrift.TFramedTransport,
+  protocol: thrift.TBinaryProtocol,
+  max_attempts: 10000,
+  retry_max_delay: 3000,
+  //   connect_timeout: 10 * 60000, // wait for 10 minutes
+  connect_timeout: 6000, // wait for 6 seconds
+  // connection breaks after retrys
+  onTerminated: function (err) {
+    logger.error("[clause] Connection Terminated, exit application now.", err);
+    // it would force restart app with other mechanism, e.g. docker-compose restart always
+    process.exit(1);
+  },
+});
+```
+
 Introduction
 ============
 
