@@ -33,9 +33,6 @@
   "directories": {
     "lib": "./lib/nodejs/lib/thrift"
   },
-  "engines": {
-    "node": ">= 4.1.0"
-  },
   "files": [
     "lib/nodejs/lib/thrift",
     "lib/nodejs/README.md"
@@ -54,6 +51,9 @@
     "type": "git",
     "url": "git+https://github.com/chatopera/node-thrift.git"
   },
+    "engines": {
+    "node": ">=10"
+  },
   "scripts": {
     "cover": "lib/nodejs/test/testAll.sh COVER",
     "lint": "eslint lib/nodejs/. --ext .js",
@@ -62,5 +62,9 @@
     "test": "lib/nodejs/test/testAll.sh",
     "test-ts": "lib/nodets/test/testAll.sh"
   },
-  "version": "0.12.0"
+  "version": "0.12.0",
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org",
+    "access": "public"
+  }
 }
